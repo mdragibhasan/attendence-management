@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input_semester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Semester"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Code:"
+            android:textSize="16dp" />
+
+        <Spinner
+            android:id="@+id/input_course_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/lecture_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lecture Count"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Date : "
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/input_lecture_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:onClick="showDatePickerDialog"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="takeAttendances"
+            android:text="Take Attendances" />
+
+    </LinearLayout>
+
+</ScrollView>
